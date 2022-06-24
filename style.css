@@ -1,11 +1,11 @@
 html{
-    background-image: linear-gradient(0deg, #79208f , #ff55b8);
+    background-image: linear-gradient(0deg, #844993 , #ff92d2);
 }
 .app{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-    background-color: rgb(92, 28, 124);
+    background-color: rgb(122, 60, 154);
     text-align: center;
     min-height: 100px;
     font-family: monospace;
@@ -14,14 +14,16 @@ html{
     margin: 0 auto;
     max-width: 60vh;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 10vh;
 }
 button{
     border-style: none;
-    color: #230bab;
+    color: #3b21cf;
     padding: 30px;
     border-radius: 30px;
     margin: 10px;
     font-size: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .title{
     font-size: 50px;
