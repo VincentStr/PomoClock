@@ -1,0 +1,55 @@
+html{
+    background-image: linear-gradient(0deg, #79208f , #ff55b8);
+}
+.app{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    background-color: rgb(92, 28, 124);
+    text-align: center;
+    min-height: 100px;
+    font-family: monospace;
+    border-radius: 50px;
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 60vh;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+button{
+    border-style: none;
+    color: #230bab;
+    padding: 30px;
+    border-radius: 30px;
+    margin: 10px;
+    font-size: 25px;
+}
+.title{
+    font-size: 50px;
+    grid-column: 1 / span 3;
+    color:whitesmoke;
+}
+.controls{
+    grid-column: 1 /span 3;
+}
+.label{
+    transition: 0.5s;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column: 1 /span 3;
+    padding: 10px;
+}
+#timer-label{
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+h1{
+    color:whitesmoke;
+    padding: 10px;
+    
+}
+#root{
+    margin: 0 auto;
+}
