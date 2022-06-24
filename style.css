@@ -1,7 +1,8 @@
-html{
-    background-image: linear-gradient(0deg, #844993 , #ff92d2);
+html {
+    background-image: linear-gradient(0deg, #844993, #ff92d2);
 }
-.app{
+
+.app {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -12,11 +13,12 @@ html{
     border-radius: 50px;
     padding: 10px;
     margin: 0 auto;
-    max-width: 60vh;
+    max-width: 1200px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-top: 10vh;
 }
-button{
+
+button {
     border-style: none;
     color: #3b21cf;
     padding: 30px;
@@ -25,15 +27,18 @@ button{
     font-size: 25px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.title{
+
+.title {
     font-size: 50px;
     grid-column: 1 / span 3;
-    color:whitesmoke;
+    color: whitesmoke;
 }
-.controls{
+
+.controls {
     grid-column: 1 /span 3;
 }
-.label{
+
+.label {
     transition: 0.5s;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -41,17 +46,39 @@ button{
     grid-column: 1 /span 3;
     padding: 10px;
 }
-#timer-label{
+
+#timer-label {
     grid-column: 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
 }
-h1{
-    color:whitesmoke;
+
+h1 {
+    color: whitesmoke;
     padding: 10px;
-    
+
 }
-#root{
-    margin: 0 auto;
+
+
+
+@media only screen and (max-width: 833px) {
+    .app {
+        min-width: 90%;
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .app {
+        max-width: 70%;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+    .app {
+        max-width: 50%;
+    }
+
 }
