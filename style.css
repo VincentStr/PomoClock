@@ -6,7 +6,7 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-    background-color: rgb(122, 60, 154);
+    background-color: rgba(123, 60, 154, 0.813);
     text-align: center;
     min-height: 100px;
     font-family: monospace;
@@ -68,6 +68,13 @@ h1 {
     }
     .title{
         font-size: 3em;
+    }
+    button{
+        padding: 10px;
+        border-radius: 10px;
+    }
+    #timer-label{
+        font-size: 10px;
     }
 
 }
