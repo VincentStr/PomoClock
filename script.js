@@ -7,14 +7,11 @@ function App () {
 
     const [playPause, setPlayPause] = React.useState(false)
     const [symbol, setSymbol] = React.useState({__html:"&#9654;"})
-    
-
-    const[timeSBLeft, setTimeSBLeft] = React.useState(1500)
-
+    const [timeSBLeft, setTimeSBLeft] = React.useState(1500)
     const [intervalId, setIntervalId] = React.useState()
     const [labelName, setLabelName] = React.useState("Session")
 
-    const[timeLeft, setTimeLeft] = React.useState(1500)
+
 
     function hanldeClick (e) {
         const name = e.target.name
@@ -36,11 +33,10 @@ function App () {
             if(sessionT == 0){sessionT = 1}
             if(sessionT == 61){sessionT = 60}
             setSessionTime(sessionT)
-            setMinutes(sessionT)
+            timeFunc(sessionT*60)
         }
 
         setTimeSBLeft(sessionTime * 60)
-        setTimeLeft(sessionTime * 60)
     }
     function resetTime(){
         setbreakTime(5)
@@ -53,32 +49,43 @@ function App () {
     
     function clockTimer(){
     
-        playPause ? setSymbol({__html:"&#9654;"}) : setSymbol({__html:"&#9208;"})
+        playPause ? setSymbol({__html:"&#9654;"}) : setSymbol({__html:"| |"})
         playPause ? setPlayPause(false):setPlayPause(true)
 
         if(playPause != true){
+         try {
             setIntervalId ( setInterval(() => {
-                timer()}, 1000))
-            console.log("on")
+                setTimeSBLeft(t => t -1)
+            }, 1000))
+            ("on")
+         } catch (error) {
+            
+         }
           
         }
         else {
-
-           clearInterval(intervalId)
-            console.log("off")
+            try {
+                clearInterval(intervalId)   
+            } catch (error) {
+                
+            }
+            ("off")
         }
         
     }
 
-    function timer(){
+    /* function timer(){
             setTimeSBLeft(t => t -1)
+            timeFunc(timeSBLeft-1)
+            (timeSBLeft)
             
-    }
-    React.useEffect(() => {
-        setTimeLeft(timeSBLeft*1000) 
+    } */
 
-        let minutesT = Math.floor((timeLeft /  (1000*60)))
-        let secondsT = Math.floor((timeLeft % (1000 *60)) / 1000)
+    const timeFunc = (curVal) =>{
+     
+        
+        let minutesT = Math.floor((curVal /  (60)))
+        let secondsT = Math.floor((curVal % 60))
         
         if(secondsT > 9){
             setSeconds(secondsT)
@@ -91,7 +98,14 @@ function App () {
         }   else {
             setMinutes("0" + minutesT)
         }
-     
+        
+        
+    }
+
+    React.useEffect(() => {
+       
+        (timeSBLeft)
+        timeFunc(timeSBLeft)
 
         if(timeSBLeft == 0 && labelName == "Session"){
             setLabelName("Break")
